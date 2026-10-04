@@ -1,0 +1,112 @@
+/* ============================================
+   TRANSPARENT WHITE CLOUD SCROLL TRANSITION
+   ============================================ */
+
+/* ---- Cloud Transition Overlay Container ----
+   Fixed overlay, sits at z-index 15 (above hero layers, below about section).
+   Starts positioned completely above the viewport and sweeps DOWN + ZOOMS on scroll. */
+.cloud-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 15;
+  pointer-events: none;
+  visibility: hidden;
+  will-change: transform, opacity;
+  overflow: visible;
+}
+
+.cloud-zoom-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center 20%;
+  will-change: transform;
+}
+
+/* Solid white extension above the cloud image to ensure full-screen white coverage */
+.cloud-solid-top {
+  position: absolute;
+  top: -120vh;
+  left: -50vw;
+  width: 200vw;
+  height: 130vh;
+  background-color: #FFFFFF;
+}
+
+/* The exact user-provided transparent white cloud PNG */
+.transition-cloud-img {
+  position: absolute;
+  top: 0;
+  left: -25vw;
+  width: 150vw;
+  height: auto;
+  max-width: none;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ---- About section: Foreground White Platform (z-index 30, ALWAYS ABOVE CLOUD) ---- */
+.about-section {
+  position: relative;
+  z-index: 30;
+  background-color: #FFFFFF;
+  min-height: 100vh;
+}
+
+/* Foreground content inside #about */
+#about .section-divider,
+#about .about-grid,
+#about .about-paragraph,
+#about .timeline-item {
+  position: relative;
+  z-index: 35;
+  will-change: opacity, transform;
+}
+
+/* Initial state for sequential one-by-one reveal */
+#about .section-divider,
+#about .about-paragraph,
+#about .timeline-item {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+/* ---- About section: dark text colors for readability on white bg ----
+   These initial dark values are animated to the original light values
+   via GSAP as the background transitions from white to black. */
+#about .section-divider h2 {
+  color: #1a1a1a;
+}
+
+#about .section-divider .line {
+  background: linear-gradient(90deg, transparent, rgba(50, 50, 50, 0.2), transparent);
+}
+
+#about .about-paragraph {
+  color: #333333;
+}
+
+#about .timeline-label {
+  color: #1a1a1a;
+}
+
+#about .timeline-dot {
+  background: #333333;
+  border-color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(50, 50, 50, 0.4);
+}
+
+#about .timeline-line {
+  background: rgba(50, 50, 50, 0.25);
+}
+
+#about .overlapping-card,
+#about .timeline-card-wrapper {
+  border-color: rgba(0, 0, 0, 0.12);
+}

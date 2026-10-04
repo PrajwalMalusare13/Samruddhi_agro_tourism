@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Samruddhi Agro | Mahabaleshwar</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/entry.css">
+</head>
+
+<body>
+  <!-- Cinematic Background Container -->
+  <div class="cinematic-bg-container">
+    <div class="cinematic-bg"></div>
+    <div class="mist-overlay"></div>
+    <div class="color-overlay"></div>
+  </div>
+
+  <!-- Main Content Gateway -->
+  <main class="gateway-wrapper">
+    <header class="logo-area">
+      <div class="logo-symbol">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          <path d="M2 12h20" />
+        </svg>
+      </div>
+      <h1 class="brand-title">SAMRUDDHI AGRO</h1>
+      <p class="brand-subtitle">Welcome to Samruddhi Agro</p>
+    </header>
+
+    <div class="selection-container">
+      <!-- Customer Card -->
+      <a href="customer.html" class="choice-card" id="choice-customer">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <span class="card-role">EXPLORE</span>
+          <h2 class="card-title">CUSTOMER</h2>
+          <p class="card-desc">Book your stay, experience the nature safari, and discover Mahabaleshwar.</p>
+          <div class="card-btn">
+            <span>Enter Website</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Owner Card -->
+      <a href="owner.html" class="choice-card" id="choice-owner">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <span class="card-role">MANAGE</span>
+          <h2 class="card-title">OWNER</h2>
+          <p class="card-desc">Access management portal, track bookings, and oversee camp operations.</p>
+          <div class="card-btn">
+            <span>Portal Login</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <footer class="entry-footer">
+      <p>&copy; 2026 Samruddhi Agro Tourism & River Camp, Mahabaleshwar. All Rights Reserved.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.querySelectorAll('.choice-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--x', `${x}px`);
+        card.style.setProperty('--y', `${y}px`);
+      });
+    });
+  </script>
+</body>
+
+</html>

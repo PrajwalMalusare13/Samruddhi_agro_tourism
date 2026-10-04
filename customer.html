@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samruddhi Agro Tourism | Premium Mahabaleshwar Tour</title>
+  <meta name="description"
+    content="Experience cinematic Mahabaleshwar with Samruddhi Agro Tourism - river games, camping, safari and luxury nature stays.">
+  <link rel="stylesheet" href="css/global.css?v=2">
+  <link rel="stylesheet" href="css/customer.css?v=2">
+  <link rel="stylesheet" href="css/cloud-transition.css">
+  <!-- GSAP & ScrollTrigger for smooth cinematic scrolling -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar" id="main-navbar">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          <path d="M2 12h20" />
+        </svg>
+      </div>
+      <span>Samruddhi Agro</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#hero">HOME</a>
+      <a href="#activities">INCLUDE / ACTIVITIES</a>
+      <a href="#about">ABOUT / STAY</a>
+      <a href="#gallery">GALLERY</a>
+      <a href="#book">CONTACT</a>
+    </nav>
+    <a href="#book" class="nav-btn-book">BOOK</a>
+  </header>
+
+  <!-- Transparent White Cloud Transition Overlay (Top to Bottom + Zoom) -->
+  <div class="cloud-transition-overlay" id="cloud-overlay" aria-hidden="true">
+    <div class="cloud-zoom-wrapper" id="cloud-zoom-wrapper">
+      <div class="cloud-solid-top"></div>
+      <img src="white_cloud_transition.png" alt="" class="transition-cloud-img" id="transition-cloud-img">
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <!-- Master Layer Composition -->
+    <div class="hero-layers-wrapper" id="hero-layers">
+      <!-- Layer 1: Sky + Sunlight (deepest background) -->
+      <img src="./hero_mountain_sun.jpg" alt="Mahabaleshwar sunrise sky and mountains"
+        class="hero-layer hero-layer-sky">
+
+      <!-- Layer 2: Distant Mountains -->
+      <img src="distant mountais.png" alt="" class="hero-layer hero-layer-distant-mountains">
+
+      <!-- Layer 3: Distant Mist -->
+      <img src="mist.jpg" alt="" class="hero-layer hero-layer-distant-mist">
+
+      <!-- Layer 4: Hero Typography & CTA -->
+      <div class="hero-title-container" id="hero-typography">
+        <div class="hero-text-content">
+          <h1 class="hero-title">MAHABALESHWAR</h1>
+          <p class="hero-subtitle">Escape into the mountains.</p>
+          <a href="#book" class="hero-cta-btn"><span>BOOK YOUR STAY</span></a>
+        </div>
+      </div>
+
+      <!-- Layer 6: Foreground Landscape -->
+      <img src="landscape.png" alt="" class="hero-layer hero-layer-foreground-landscape">
+
+      <!-- Layer 7: Foreground Mist -->
+      <img src="foreground mist.png" alt="" class="hero-layer hero-layer-foreground-mist">
+
+      <!-- Layer 8: Saree Woman (Elegantly scaled, anchored right) -->
+      <img src="saree.png" alt="Woman in saree overlooking Mahabaleshwar" class="hero-layer hero-layer-saree-woman">
+    </div>
+
+    <!-- Floating Book Pill (Mobile/Desktop quick link) -->
+
+
+    <!-- Bottom gradient transition into Activities -->
+    <div class="hero-bottom-shadow"></div>
+  </section>
+
+  <!-- Activities Section -->
+  <section class="activities-section">
+    <div class="section-divider">
+      <div class="line"></div>
+      <h2>ACTIVITIES</h2>
+      <div class="line"></div>
+    </div>
+    <div class="activities-container">
+      <!-- Card 1: Boating -->
+      <div class="activity-card">
+        <div class="activity-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=500&q=80"
+            alt="Boating at Mahabaleshwar">
+        </div>
+        <h3>Boating</h3>
+      </div>
+
+      <!-- Card 2: Camp Fire -->
+      <div class="activity-card">
+        <div class="activity-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=500&q=80"
+            alt="Camp Fire at Samruddhi Agro">
+        </div>
+        <h3>Camp Fire</h3>
+      </div>
+
+      <!-- Card 3: Jungle Safari -->
+      <div class="activity-card">
+        <div class="activity-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=500&q=80"
+            alt="Jungle Safari path">
+        </div>
+        <h3>Jungle Safari</h3>
+      </div>
+
+      <!-- Card 4: Kayaking -->
+      <div class="activity-card">
+        <div class="activity-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1471086569966-db3eebc25a59?auto=format&fit=crop&w=500&q=80"
+            alt="Kayaking on lake">
+        </div>
+        <h3>Kayaking</h3>
+      </div>
+
+      <!-- Card 5: Trekking -->
+      <div class="activity-card">
+        <div class="activity-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=500&q=80"
+            alt="Trekking trails">
+        </div>
+        <h3>Trekking</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Stay Section -->
+  <section class="about-section" id="about">
+    <div class="section-divider">
+      <div class="line"></div>
+      <h2>ABOUT & STAY</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="about-grid">
+      <!-- Description Column -->
+      <div class="about-text-col">
+        <p class="about-paragraph">
+          You will get to visit the surrounding region which is full of breathtaking landscapes, waterfalls, freedom and
+          exciting things. From wind farms to Kaas Plateau of Flowers to the adventurous Venna Boat or the peaceful
+          charm of Tapola – Mini Kashmir.
+        </p>
+        <p class="about-paragraph second">
+          At Samruddhi Agro Tourism & River Games, we are committed to making your holiday a blend of relaxation, fun,
+          and adventure. Whether it's a family getaway, a couple retreat, or a weekend out, our camp is your perfect
+          destination.
+        </p>
+      </div>
+
+      <!-- Interactive Timeline Map Column -->
+      <div class="about-timeline-col">
+        <div class="timeline-line"></div>
+
+        <!-- Timeline Item 1 (Kaas-plateu) -->
+        <div class="timeline-item flex-end" id="timeline-kaas">
+          <div class="timeline-dot"></div>
+          <div class="timeline-label left-label">Kaas-plateu</div>
+
+          <div class="timeline-left-images">
+            <div class="overlapping-card card-pink-flowers">
+              <img src="tapola.jpg" alt="tapola">
+              <div class="img-caption">tapola</div>
+            </div>
+            <div class="overlapping-card card-blue-lake">
+              <img src="Kaas-dam.jpg" alt="Kaas-dam">
+              <div class="img-caption">Kaas-dam</div>
+            </div>
+          </div>
+
+          <div class="timeline-right-image">
+            <div class="timeline-card-wrapper card-top">
+              <img src="Kaas-plateu.jpg" alt="Kaas-plateu">
+              <div class="img-caption">Kaas-plateu</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 (vasota) -->
+        <div class="timeline-item flex-start" id="timeline-vasota">
+          <div class="timeline-dot"></div>
+          <div class="timeline-label right-label">vasota</div>
+
+          <div class="timeline-right-images">
+            <div class="overlapping-card card-vasota-1">
+              <img src="vasota.jpg" alt="vasota">
+              <div class="img-caption">vasota</div>
+            </div>
+            <div class="overlapping-card card-vasota-2">
+              <img src="shivsagar.jpg" alt="shivsagar">
+              <div class="img-caption">shivsagar</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 (vajrai) -->
+        <div class="timeline-item flex-end" id="timeline-venna">
+          <div class="timeline-dot"></div>
+          <div class="timeline-label left-label">vajrai</div>
+
+          <div class="timeline-left-image">
+            <div class="timeline-card-wrapper card-bottom-left">
+              <img src="vajrai.jpg" alt="vajrai">
+              <div class="img-caption">vajrai</div>
+            </div>
+          </div>
+
+          <div class="timeline-right-image">
+            <div class="timeline-card-wrapper card-bottom-right">
+              <img src="shemdi-math.jpg" alt="shemdi-math">
+              <div class="img-caption">shemdi-math</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included Section -->
+  <section class="included-section" id="activities">
+    <div class="section-divider">
+      <div class="line"></div>
+      <h2>WHAT'S INCLUDED</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="included-grid">
+      <!-- Guides -->
+      <div class="included-card card-guides">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+        </div>
+        <h3>Guides</h3>
+        <p>Knowledge of the local area and diversity region.</p>
+      </div>
+
+      <!-- Open Restaurant -->
+      <div class="included-card card-restaurant">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
+        </div>
+        <h3>Open Restaurant</h3>
+        <p>It serves exciting delicious food items with variety of veg and non-veg delicacies.</p>
+      </div>
+
+      <!-- Parking -->
+      <div class="included-card card-parking">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+            <path d="M9 17V7h4a3 3 0 0 1 0 6H9" />
+          </svg>
+        </div>
+        <h3>Parking</h3>
+        <p>Convenient parking facilities near the resort & hotel premises.</p>
+      </div>
+
+      <!-- Kids Play Area -->
+      <div class="included-card card-kidsplay">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path
+              d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+          </svg>
+        </div>
+        <h3>Kids Play Area</h3>
+        <p>Dedicated play areas so your children can play freely and safely.</p>
+      </div>
+    </div>
+
+    <!-- Package Details Section -->
+    <div class="package-details-container">
+      <!-- Main Package Header -->
+      <div class="package-header">
+        <h3 class="package-title">Package for Groups and Family Rs.1699/- per person</h3>
+        <div class="package-timings">
+          <p><span class="timing-label">Check In :</span> <span class="timing-val">01:00 pm</span></p>
+          <p><span class="timing-label">Check Out :</span> <span class="timing-val">10:30 am</span></p>
+        </div>
+      </div>
+
+      <!-- Two Includes Lists -->
+      <div class="package-includes-wrapper">
+        <div class="includes-block">
+          <h4 class="includes-heading">Includes :</h4>
+          <ul class="includes-bullet-list">
+            <li>River View Non AC Rooms</li>
+            <li>Welcome Drink</li>
+            <li>Unlimited Lunch (Veg/NonVeg)</li>
+            <li>Evening Tea/Coffee</li>
+            <li>Unlimited Dinner (Veg/NonVeg)</li>
+            <li>Next Day Morning Breakfast</li>
+          </ul>
+        </div>
+
+        <div class="includes-block">
+          <h4 class="includes-heading">Includes :</h4>
+          <ul class="includes-bullet-list">
+            <li>Uninfinity Swimming Pool</li>
+            <li>Indoor & Outdoor Games</li>
+            <li>Memorable Sunset Point</li>
+            <li>DJ Night</li>
+            <li>Family Games</li>
+            <li>Bonefire</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Note Section -->
+      <div class="package-notes-block">
+        <h4 class="notes-heading">Note :</h4>
+        <ul class="notes-bullet-list">
+          <li>Extra Snacks will be Charged</li>
+          <li>Extra Boating will be Charged</li>
+          <li>Childrens Above 6 Years will be Full Charged</li>
+          <li>Parking is FREE</li>
+        </ul>
+      </div>
+
+      <!-- Without Food Pricing Options -->
+      <div class="package-pricing-without-food">
+        <div class="pricing-option-card">
+          <p class="pricing-title">Without Food – Room Charges : <span class="price-highlight">Rs.1200/- per person</span></p>
+          <p class="pricing-extra">(All other activities will be charged extra.)</p>
+        </div>
+        <div class="pricing-option-card">
+          <p class="pricing-title">Without Food – Double Bed Deluxe Room Charges : <span class="price-highlight">Rs.4800/-</span></p>
+          <p class="pricing-extra">(All other activities will be charged extra.)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="section-divider">
+      <div class="line"></div>
+      <h2>GALLERY</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item item-large">
+        <img src="gallery1.jpg" alt="Gallery image 1">
+      </div>
+      <div class="gallery-item">
+        <img src="gallery2.jpg" alt="Gallery image 2">
+      </div>
+      <div class="gallery-item">
+        <img src="gallery3.jpg" alt="Gallery image 3">
+      </div>
+      <div class="gallery-item">
+        <img src="gallery4.jpg" alt="Gallery image 4">
+      </div>
+      <div class="gallery-item item-wide">
+        <img src="gallery5.webp" alt="Gallery image 5">
+      </div>
+      <div class="gallery-item">
+        <img src="gallery8.webp" alt="Gallery image 8">
+      </div>
+      <div class="gallery-item">
+        <img src="gallery7new.webp" alt="Gallery image 7">
+      </div>
+      <div class="gallery-item">
+        <img src="gallery6.jpeg" alt="Gallery image 6">
+      </div>
+    </div>
+
+    <div class="gallery-footer-action">
+      <a href="https://www.google.com/search?q=samruddhi+agro+tourism+tapola&oq=samruddhi&gs_lcrp=EgZjaHJvbWUqCAgCEEUYJxg7MgYIABBFGDwyBggBEEUYOTIICAIQRRgnGDsyCggDEAAYsQMYgAQyBggEEEUYPDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDM4ODhqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8"
+        target="_blank" rel="noopener noreferrer" class="gallery-view-more">
+        <span>View More</span>
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- LOCKED FINAL HOUSE SCENE — DO NOT MODIFY -->
+  <!-- Booking Section with Glassmorphism Form overlaying locked final house background -->
+  <section class="booking-section" id="book">
+    <video class="booking-bg-video" autoplay muted loop playsinline preload="auto">
+      <source src="output.mp4" type="video/mp4">
+    </video>
+    <div class="booking-color-overlay"></div>
+
+    <div class="booking-container">
+      <div class="booking-glass-panel">
+        <h2 class="form-promo-title">Experience Mini Kashmir<br>Book Your Escape Today</h2>
+
+        <form class="booking-form"
+          onsubmit="event.preventDefault(); alert('Booking request sent successfully! We will contact you soon.');">
+          <legend class="form-legend">Leave a request</legend>
+
+          <div class="form-group">
+            <label for="booking-name" class="visually-hidden">Your name</label>
+            <input type="text" id="booking-name" placeholder="Your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="booking-phone" class="visually-hidden">Phone number</label>
+            <input type="tel" id="booking-phone" placeholder="Phone number" required>
+          </div>
+
+          <div class="form-group">
+            <label for="booking-dates" class="visually-hidden">Booking dates</label>
+            <input type="text" id="booking-dates" placeholder="Booking dates" onfocus="(this.type='date')"
+              onblur="(this.type='text')" required>
+          </div>
+
+          <button type="submit" class="booking-submit-btn">Send Request</button>
+        </form>
+      </div>
+
+      <div class="booking-alt-option">
+        <span class="alt-or">OR</span>
+        <span class="alt-by-number">By Number</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="customer-footer">
+    <div class="footer-container">
+      <div class="footer-info-block">
+        <div class="footer-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              <path d="M2 12h20" />
+            </svg>
+          </div>
+          <h3 class="footer-title">Samruddhi Agro Tourism & River Camp</h3>
+        </div>
+
+        <address class="footer-address">
+          At - Furus, Post - Apati,<br>
+          Near by Tapola, Tal - Jaoli,<br>
+          Dist - Satara, Pin - 412806.
+        </address>
+
+        <div class="footer-contact-details">
+          <div class="footer-email">
+            <a href="mailto:samruddhiagrotourismofficial77@gmail.com">samruddhiagrotourismofficial77@gmail.com</a>
+          </div>
+          <div class="footer-phones">
+            <a href="tel:+919403496287">+91 94034 96287</a>
+            <a href="tel:+919422489296">+91 94224 89296</a>
+            <a href="tel:+919403843393">+91 94038 43393</a>
+            <a href="tel:+919422585422">+91 94225 85422</a>
+          </div>
+        </div>
+
+        <div class="footer-social-row">
+          <a href="https://www.facebook.com/samruddhiagrotourism/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer-social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/samruddhiagrotourism/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer-social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@SamruddhiAgrotourism" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="footer-social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+          <a href="https://www.justdial.com/Mahabaleshwar/Samruddhi-agro-tourism-and-river-camp-Shree-Janani-Devi-Furus-Jaoli/9999P2168-2168-250905164743-Y5U5_BZDET" target="_blank" rel="noopener noreferrer" aria-label="Find us on Justdial" class="footer-social-link justdial-link">
+            <svg class="justdial-star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+            <span>Find us on Justdial</span>
+          </a>
+        </div>
+      </div>
+      <a href="#book" class="footer-btn-book">Book</a>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2026 Samruddhi Agro Tourism & River Camp, Mahabaleshwar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/customer.js"></script>
+  <script src="js/cloud-transition.js"></script>
+</body>
+
+</html>

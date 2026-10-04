@@ -1,0 +1,330 @@
+/* Entry Gateway styling */
+
+body {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+/* Cinematic Zoom Background */
+.cinematic-bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.cinematic-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  animation: kenBurnsZoom 30s infinite alternate ease-in-out;
+}
+
+.color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg,
+      rgba(10, 14, 11, 0.9) 0%,
+      rgba(10, 14, 11, 0.7) 40%,
+      rgba(31, 58, 36, 0.4) 100%);
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+
+/* Subtle Animated Mist Overlay */
+.mist-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: repeating-linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.03) 25%,
+      rgba(255, 255, 255, 0) 50%);
+  filter: blur(40px);
+  animation: mistMove 60s infinite linear;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+/* Layout Wrapper */
+.gateway-wrapper {
+  max-width: 1200px;
+  width: 90%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80vh;
+  z-index: 10;
+  animation: fadeUp 1.2s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+/* Header logo style */
+.logo-area {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo-symbol {
+  width: 60px;
+  height: 60px;
+  color: var(--accent-gold);
+  margin: 0 auto 20px;
+  animation: rotateSlow 20s infinite linear;
+  filter: drop-shadow(0 0 10px rgba(197, 168, 128, 0.3));
+}
+
+.brand-title {
+  font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 3.2rem;
+  font-weight: 200;
+  letter-spacing: 0.4em;
+  margin-right: -0.4em;
+  /* Compensate for letter spacing */
+  color: var(--text-primary);
+  text-shadow: 0 0 30px rgba(240, 244, 241, 0.2);
+  margin-bottom: 10px;
+}
+
+.brand-subtitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--accent-gold);
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+/* Selection Cards container */
+.selection-container {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 900px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+/* Premium Card layout */
+.choice-card {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+  padding: 40px 30px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1),
+    border-color 0.5s var(--transition-fast),
+    box-shadow 0.5s var(--transition-fast);
+}
+
+.choice-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(800px circle at var(--x, 50%) var(--y, 50%),
+      rgba(197, 168, 128, 0.06),
+      transparent 40%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.choice-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(197, 168, 128, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+    0 0 30px var(--accent-green-glow);
+}
+
+.choice-card:hover::before {
+  opacity: 1;
+}
+
+.card-glow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-green), var(--accent-gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.choice-card:hover .card-glow {
+  transform: scaleX(1);
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-role {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--accent-gold);
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Courier New', monospace;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.card-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  flex-grow: 1;
+}
+
+.card-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+  color: var(--accent-gold);
+}
+
+.choice-card:hover .card-btn {
+  color: var(--accent-gold-hover);
+}
+
+.choice-card:hover .arrow-icon {
+  transform: translateX(6px);
+}
+
+/* Footer Section */
+.entry-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0.6;
+  margin-top: 40px;
+}
+
+/* Animations */
+@keyframes kenBurnsZoom {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  100% {
+    transform: scale(1.15) translate(-1%, -1%);
+  }
+}
+
+@keyframes mistMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes rotateSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Scaling */
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
+  .gateway-wrapper {
+    min-height: auto;
+    padding: 20px 10px;
+  }
+
+  .brand-title {
+    font-size: 2.2rem;
+    letter-spacing: 0.3em;
+  }
+
+  .selection-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .choice-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 24px;
+  }
+
+  .card-desc {
+    margin-bottom: 25px;
+  }
+}
